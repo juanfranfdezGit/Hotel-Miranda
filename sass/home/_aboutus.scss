@@ -1,0 +1,71 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.aboutus {
+    padding: 60px 0;
+
+    &__info {
+        background: $white200;
+        padding: 40px 20px 180px 20px;
+        @include set-flex(center, flex-start, column);
+        gap: 24px;
+        margin-bottom: -120px;
+
+        &__span {
+            @include font($roboto, 13px, 700, 18px, $black400);
+            letter-spacing: 2.8px;
+        }
+    }
+
+    &__card {
+        @include set-flex(center, flex-start, column);
+        width: 75vw;
+        height: 640px;
+        margin: 0 auto;
+        box-shadow: 0 0 4px $black400;
+        margin-bottom: 45px;
+
+        &__image {
+            width: 100%;
+            height: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__info {
+            @include set-flex(center, center, column);
+            padding: 12px 40px;
+            text-align: center;
+            height: 50%;
+            gap: 30px;
+            position: relative;
+
+            &__ico {
+                width: 68px;
+                z-index: 3;
+            }
+
+            &__icoBack {
+                position: absolute;
+                width: 180px;
+                top: 40px;
+                right: 10px;
+                opacity: .1;
+            }
+        }
+
+        &-dark {
+            .aboutus__card__info {
+                background: $black900;
+
+                &__title, &__description {
+                    color: $white900;
+                }
+            }
+        }
+    }
+}

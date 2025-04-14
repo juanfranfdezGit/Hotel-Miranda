@@ -149,7 +149,6 @@
   padding: 160px 20px 80px 20px;
 }
 .banner__info__span {
-  text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -254,6 +253,129 @@
     margin-left: 10vw;
   }
 }
+.aboutus {
+  padding: 60px 0;
+}
+.aboutus__info {
+  background: #F9F9F9;
+  padding: 40px 20px 180px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: -120px;
+}
+.aboutus__info__span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #d3d3d3;
+  letter-spacing: 2.8px;
+}
+.aboutus__card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 75vw;
+  height: 640px;
+  margin: 0 auto;
+  box-shadow: 0 0 4px #d3d3d3;
+  margin-bottom: 45px;
+}
+.aboutus__card__image {
+  width: 100%;
+  height: 50%;
+}
+.aboutus__card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aboutus__card__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px 40px;
+  text-align: center;
+  height: 50%;
+  gap: 30px;
+  position: relative;
+}
+.aboutus__card__info__ico {
+  width: 68px;
+  z-index: 3;
+}
+.aboutus__card__info__icoBack {
+  position: absolute;
+  width: 180px;
+  top: 40px;
+  right: 10px;
+  opacity: 0.1;
+}
+.aboutus__card-dark .aboutus__card__info {
+  background: #111;
+}
+.aboutus__card-dark .aboutus__card__info__title, .aboutus__card-dark .aboutus__card__info__description {
+  color: #fff;
+}
+
+.rooms {
+  width: 100vw;
+  text-align: center;
+}
+.rooms__span {
+  color: #333333;
+}
+.rooms__title {
+  margin-top: 24px;
+}
+
+.swiper {
+  width: 100vw;
+  overflow: visible;
+  height: 350px;
+  margin: 80px 0 120px 0;
+}
+.swiper-slide {
+  width: 100%;
+  transition: transform 0.3s ease;
+  transform: scale(0.8);
+}
+.swiper-slide.swiper-slide-active {
+  transform: scale(1);
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-prev {
+  background-color: #fff;
+  color: #BEAD8E;
+  padding: 10px 20px;
+  z-index: 10;
+}
+.swiper-button-prev::after {
+  font-size: 1rem !important;
+  color: #BEAD8E;
+  content: "";
+}
+.swiper-button-next {
+  background-color: #BEAD8E;
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 10;
+}
+.swiper-button-next::after {
+  font-size: 1rem !important;
+  color: #fff;
+  content: "";
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -271,6 +393,32 @@ h1 {
   line-height: 60px;
   color: #fff;
   text-transform: capitalize;
+}
+
+h2 {
+  font-family: "Old Standard TT", serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #111;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: "Old Standard TT", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #111;
+  text-transform: capitalize;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
 }
 
 li {
@@ -293,6 +441,7 @@ span {
   font-weight: 400;
   line-height: 1rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 label {

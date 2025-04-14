@@ -13,7 +13,6 @@
         padding: 160px 20px 80px 20px;
 
         &__span {
-            text-transform: uppercase;
             @include font($roboto, 13px, 700, 18px, $white900);
             letter-spacing: 2.8px;
             width: 200px;

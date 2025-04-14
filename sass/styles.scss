@@ -2,6 +2,8 @@
 @use 'mixin' as *;
 @use 'common/header';
 @use 'home/banner';
+@use 'home/aboutus';
+@use 'home/rooms';
 
 * {
     padding: 0;
@@ -18,6 +20,20 @@ h1 {
     text-transform: capitalize;
 }
 
+h2 {
+    @include font($old, 56px, 400, 60px, $black900);
+    text-transform: capitalize;
+}
+
+h3 {
+    @include font($old, 30px, 400, 30px, $black900);
+    text-transform: capitalize;
+}
+
+p {
+    @include font($roboto, 14px, 400, 24px, $black700);
+}
+
 li {
     list-style: none;
     @include font($roboto, 16px, 600, 1rem, $black900);
@@ -30,6 +46,7 @@ a {
 
 span {
     @include font($roboto, 16px, 400, 1rem, $white900);
+    text-transform: uppercase
 }
 
 label {

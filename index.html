@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+     />
 </head>
 <body>
 
@@ -71,6 +75,63 @@
                 </form>
             </div>
         </section>
+
+        <section class="aboutus">
+
+            <div class="aboutus__info">
+                <span class="aboutus__info__span">about us</span>
+                <h2 class="aboutus__info__title">Discover our underground.</h2>
+                <p class="aboutus__info__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <button class="button button-solid">book now</button>
+            </div>
+
+            <div class="aboutus__card">
+                <div class="aboutus__card__image">
+                    <img src="/assets/images/img01.jpg" alt="Our Team">
+                </div>
+                <div class="aboutus__card__info">
+                    <img class="aboutus__card__info__ico" src="/assets/icos/team.svg" alt="Team Ico">
+                    <img class="aboutus__card__info__icoBack" src="/assets/icos/team.svg" alt="Team Ico Back">
+                    <h3 class="aboutus__card__info__title">strong team</h3>
+                    <p class="aboutus__card__info__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+
+            <div class="aboutus__card aboutus__card-dark">
+                <div class="aboutus__card__image">
+                    <img src="/assets/images/img02.jpg" alt="Our Team">
+                </div>
+                <div class="aboutus__card__info">
+                    <img class="aboutus__card__info__ico" src="/assets/icos/calendar02.svg" alt="Calendar Ico">
+                    <h3 class="aboutus__card__info__title">Luxury Room</h3>
+                    <p class="aboutus__card__info__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rooms">
+            <span class="rooms__span">rooms</span>
+            <h2 class="rooms__title">hand picked rooms</h2>
+
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/assets/images/room.webp" alt="Room Image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/images/room02.jpg" alt="Room Image 02">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/assets/images/room03.jpg" alt="Room Image 03">
+                    </div>
+                </div>
+            
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -80,3 +141,4 @@
 </body>
 </html>
 <script type="module" src="/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
