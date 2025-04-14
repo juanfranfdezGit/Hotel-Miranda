@@ -15,6 +15,7 @@ body {
 li {
     list-style: none;
     @include font($roboto, 1.4rem, 600, 1rem, $black900);
+    cursor: pointer;
 }
 
 a {
