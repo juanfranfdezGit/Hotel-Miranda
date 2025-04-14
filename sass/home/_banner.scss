@@ -1,0 +1,120 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.banner {
+    background: $black900;
+    @include set-flex(center, flex-start, column);
+    width: 100vw;
+
+    &__info {
+        @include set-flex(center, flex-start, column);
+        gap: 40px;
+        background: $black700;
+        padding: 160px 20px 80px 20px;
+
+        &__span {
+            text-transform: uppercase;
+            @include font($roboto, 13px, 700, 18px, $white900);
+            letter-spacing: 2.8px;
+            width: 200px;
+        }
+
+        &__actions {
+            @include set-flex(center, center, column);
+            gap: 24px;
+        }
+    }
+}
+
+.availability {
+    padding: 80px 20px 20px 20px;
+
+    &__form {
+        @include set-flex(center, flex-start, column);
+        gap: 60px;
+
+        &__item {
+            position: relative;
+            width: 80%;
+
+            &__ico {
+                position: absolute;
+                top: 0;
+                left: 5px;
+            }
+
+            &__label {
+                position: absolute;
+                top: -30px;
+            }
+
+            &__input {
+                width: 80vw;
+                border: none;
+                background: none;
+                border-bottom: 2px solid $mainColor;
+                color: $white900;
+                padding: 12px 32px;
+                background: url('/assets/icos/calendar.svg') no-repeat left center;
+                background-size: 1rem;
+
+                &::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                    cursor: pointer;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .button {
+                margin-top: -100px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .banner {
+        padding-top: 100px;
+
+        &__info {
+            padding: 160px 20vw 100px 20vw;
+            width: 100vw;
+
+            &__title {
+                @include font($old, 120px, 400, 130px, $white900);
+                width: 800px;
+            }
+    
+            &__span {
+                width: 400px;
+            }
+    
+            &__actions {
+                @include set-flex(center, center, row);
+            }
+        }
+    }
+    
+    .availability {
+        padding: 60px 20vw 40px 20vw;
+    
+        &__form {
+            @include set-flex(center, center, row);
+            width: 60vw;
+            gap: 0px;
+    
+            &__item {
+                &__input {
+                    width: 90%;
+                }
+    
+                .button {
+                    margin-left: 10vw;
+                }
+            }
+        }
+    }
+}

@@ -12,6 +12,9 @@
   z-index: 3;
   background: #fff;
 }
+.header__span {
+  display: none;
+}
 .header__nav {
   display: flex;
   justify-content: center;
@@ -84,9 +87,14 @@
 @media (min-width: 1000px) {
   .header {
     width: 80vw;
-    margin: 40px 10vw;
+    margin: 50px 10vw;
     padding: 0px;
     max-height: 100px;
+  }
+  .header__span {
+    display: block;
+    position: absolute;
+    top: -25px;
   }
   .header__nav__hamburguer {
     display: none;
@@ -96,7 +104,7 @@
     position: relative;
     top: 20px;
     margin-left: 0;
-    margin-right: 120px;
+    margin-right: 5vw;
   }
   .header__nav__menu__list {
     display: flex;
@@ -111,7 +119,7 @@
     align-items: center;
     flex-direction: row;
     gap: 18px;
-    margin-right: 120px;
+    margin-right: 5vw;
     gap: 30px;
   }
   .header__actions img {
@@ -121,6 +129,129 @@
   }
   .overlay {
     display: none;
+  }
+}
+.banner {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100vw;
+}
+.banner__info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  background: #333333;
+  padding: 160px 20px 80px 20px;
+}
+.banner__info__span {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #fff;
+  letter-spacing: 2.8px;
+  width: 200px;
+}
+.banner__info__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.availability {
+  padding: 80px 20px 20px 20px;
+}
+.availability__form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 60px;
+}
+.availability__form__item {
+  position: relative;
+  width: 80%;
+}
+.availability__form__item__ico {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+.availability__form__item__label {
+  position: absolute;
+  top: -30px;
+}
+.availability__form__item__input {
+  width: 80vw;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #BEAD8E;
+  color: #fff;
+  padding: 12px 32px;
+  background: url("/assets/icos/calendar.svg") no-repeat left center;
+  background-size: 1rem;
+}
+.availability__form__item__input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.availability__form__item .button {
+  margin-top: -100px;
+}
+
+@media (min-width: 1000px) {
+  .banner {
+    padding-top: 100px;
+  }
+  .banner__info {
+    padding: 160px 20vw 100px 20vw;
+    width: 100vw;
+  }
+  .banner__info__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 130px;
+    color: #fff;
+    width: 800px;
+  }
+  .banner__info__span {
+    width: 400px;
+  }
+  .banner__info__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .availability {
+    padding: 60px 20vw 40px 20vw;
+  }
+  .availability__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 60vw;
+    gap: 0px;
+  }
+  .availability__form__item__input {
+    width: 90%;
+  }
+  .availability__form__item .button {
+    margin-left: 10vw;
   }
 }
 * {
@@ -133,10 +264,19 @@ body {
   min-width: 320px;
 }
 
+h1 {
+  font-family: "Old Standard TT", serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
 li {
   list-style: none;
   font-family: "Roboto", sans-serif;
-  font-size: 1.4rem;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1rem;
   color: #111;
@@ -145,6 +285,41 @@ li {
 
 a {
   text-decoration: none;
+}
+
+span {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #fff;
+}
+
+label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1rem;
+  color: #fff;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1rem;
+  color: #fff;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  background: none;
+  border: solid 2px rgba(255, 255, 255, 0.3294117647);
+  padding: 20px 40px;
+  cursor: pointer;
+  min-width: 224px;
+}
+.button-solid {
+  background: #BEAD8E;
+  border: 2px solid #BEAD8E;
 }
 
 /*# sourceMappingURL=styles.css.map */

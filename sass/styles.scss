@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'mixin' as *;
 @use 'common/header';
+@use 'home/banner';
 
 * {
     padding: 0;
@@ -12,12 +13,41 @@ body {
     min-width: 320px;
 }
 
+h1 {
+    @include font($old, 56px, 400, 60px, $white900);
+    text-transform: capitalize;
+}
+
 li {
     list-style: none;
-    @include font($roboto, 1.4rem, 600, 1rem, $black900);
+    @include font($roboto, 16px, 600, 1rem, $black900);
     cursor: pointer;
 }
 
 a {
     text-decoration: none;
+}
+
+span {
+    @include font($roboto, 16px, 400, 1rem, $white900);
+}
+
+label {
+    @include font($roboto, 16px, 700, 1rem, $white900);
+}
+
+.button {
+    @include font($roboto, 14px, 700, 1rem, $white900);
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    background: none;
+    border: solid 2px $white400;
+    padding: 20px 40px;
+    cursor: pointer;
+    min-width: 224px;
+
+    &-solid {
+        background: $mainColor;
+        border: 2px solid $mainColor;
+    }
 }
