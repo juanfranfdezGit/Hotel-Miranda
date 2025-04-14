@@ -1,0 +1,22 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'common/header';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+}
+
+li {
+    list-style: none;
+    @include font($roboto, 1.4rem, 600, 1rem, $black900);
+}
+
+a {
+    text-decoration: none;
+}
