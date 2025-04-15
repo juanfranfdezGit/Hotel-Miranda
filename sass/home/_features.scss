@@ -1,0 +1,71 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.features {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+
+    &__span {
+        @include font($roboto, 13px, 700, 18px, $black900);
+        letter-spacing: 2.8px;
+    }
+
+    &__title {
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+    &__items {
+        @include set-flex(flex-start, center, row);
+        width: 100%;
+        overflow: hidden;
+        flex-wrap: nowrap;
+
+        &__item {
+            @include set-flex(center, flex-start, column);
+            text-align: start;
+            flex: 0 0 100%;
+            padding: 100px 32px 10px 38px;
+            position: relative;
+            gap: 30px;
+
+            &::before {
+                content: '01';
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                @include font($roboto, 120px, 700, 130px, $black400);
+                opacity: .6;
+            }
+
+            &:nth-child(2)::before { content: '02'; }
+            &:nth-child(3)::before { content: '03'; }
+            &:nth-child(4)::before { content: '04'; }
+            &:nth-child(5)::before { content: '05'; }
+            &:nth-child(6)::before { content: '06'; }
+            &:nth-child(7)::before { content: '07'; }
+        }
+    }
+
+    &__indicators {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%);
+        @include set-flex(flex-start, center, row);
+        gap: 8px;
+
+        &__item {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: $black400;
+
+            &.active {
+                background: $mainColor;
+            }
+        }
+    }
+}
