@@ -477,8 +477,7 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-  overflow: hidden;
-  flex-wrap: nowrap;
+  transform: translateX(0px);
 }
 .features__items__item {
   display: flex;
@@ -549,8 +548,13 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 h1 {

@@ -19,8 +19,7 @@
     &__items {
         @include set-flex(flex-start, center, row);
         width: 100%;
-        overflow: hidden;
-        flex-wrap: nowrap;
+        transform: translateX(00px);
 
         &__item {
             @include set-flex(center, flex-start, column);
