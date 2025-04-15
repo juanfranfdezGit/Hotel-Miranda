@@ -5,10 +5,23 @@
     background: $black900;
     @include set-flex(center, center, column);
     padding: 50px 0;
+    gap: 60px;
 
     &__item {
         @include set-flex(center, center, column);
 
+        &__image {
+            margin-bottom: 50px
+        }
 
+        &__title {
+            @include font($roboto, 60px, 700, 1.4rem, $white900);
+            margin-bottom: 12px;
+        }
+
+        &__description {
+            @include font($roboto, 16px, 400, 1.4rem, $white400);
+            text-transform: capitalize;
+        }
     }
 }

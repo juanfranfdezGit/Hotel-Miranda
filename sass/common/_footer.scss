@@ -1,0 +1,108 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 60px;
+    padding: 32px 22px;
+    background: url(/assets/images/footerBack.png) center center / cover no-repeat;
+
+    .socials {
+        @include set-flex(center, flex-start, column);
+
+        &__logo {
+            margin-left: -20px;
+        }
+
+        &__description {
+            margin-bottom: 20px;
+        }
+
+        &__list {
+            @include set-flex(center, flex-start, row);
+            gap: 26px;
+            margin-bottom: 32px;
+
+            &__item-solid {
+                padding: 4px;
+                background: $mainColor;
+                @include set-flex(center, flex-start, row);
+                margin-top: -4px;
+            }
+        }
+    }
+
+    .services {
+        &__title {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &__column {
+                @include set-flex(flex-start, flex-start, column);
+
+                &__item {
+                    @include font($roboto, 16px, 400, 48px, $black700);
+                    opacity: .8;
+                    text-transform: capitalize;
+                }
+
+                &__item::before {
+                    content: '+';
+                    margin-right: 8px;
+                    color: $black700;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+
+    .contact {
+        @include set-flex(center, flex-start, column);
+        gap: 40px;
+        margin-top: 32px;
+        margin-bottom: 50px;
+
+        &__title {
+            font-size: 24px;
+        }
+
+        &__section {
+            @include set-flex(flex-start, center, row);
+            gap: 22px;
+
+            &__info {
+                &__title {
+                    @include font($old, 20px, 400, 24px, $black700);
+                    text-transform: capitalize;
+                }
+
+                &__description {
+                    @include font($roboto, 14px, 400, 20px, $black700);
+                    opacity: .6;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background: $black400;
+        width: 110vw;
+        @include set-flex(center, flex-start, column);
+        gap: 12px;
+        padding: 24px 32px;
+        position: relative;
+        left: -30px;
+        bottom: -32px;
+
+        p {
+            @include font($roboto, 16px, 700, 28px, $black700);
+        }
+    }
+}
