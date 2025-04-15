@@ -4,6 +4,7 @@
 .rooms {
     width: 100vw;
     text-align: center;
+    position: relative;
 
     &__span {
         color: $black700;
@@ -12,13 +13,50 @@
     &__title {
         margin-top: 24px;
     }
+
+    &__icons {
+        position: absolute;
+        background: $white900;
+        top: 190px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 4;
+        @include set-flex(center, center, row);
+        gap: 16px;
+        padding: 12px 24px;
+    }
+
+    &__info {
+        position: absolute;
+        top: 540px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 4;
+        background: $white900;
+        width: 90vw;
+        padding: 19px 24px;
+        @include set-flex(center, center, column);
+        gap: 12px;
+
+        &__description {
+            width: 80%;
+        }
+
+        &__price {
+            @include font($roboto, 16px, 600, 1rem, $mainColor);
+
+            span {
+                @include font($roboto, 32px, 700, 43px, $mainColor);
+            }
+        }
+    }
 }
 
 .swiper {
     width: 100vw;
     overflow: visible;
     height: 350px;
-    margin: 80px 0 120px 0;
+    margin: 50px 0 120px 0;
 
     &-slide {
         width: 100%;
