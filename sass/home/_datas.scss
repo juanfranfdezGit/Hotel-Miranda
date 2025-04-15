@@ -1,0 +1,14 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.datas {
+    background: $black900;
+    @include set-flex(center, center, column);
+    padding: 50px 0;
+
+    &__item {
+        @include set-flex(center, center, column);
+
+
+    }
+}
