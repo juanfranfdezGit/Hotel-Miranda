@@ -1,0 +1,33 @@
+@use "../mixin" as *;
+@use "../variables" as *;
+
+.title {
+    background: $black900;
+    @include set-flex(center, flex-start, column);
+    padding: 180px 10vw 96px;
+    position: relative;
+
+    &__span {
+        @include font($roboto, 13px, 700, 18px, $white900);
+        letter-spacing: 2.8px;
+        margin-bottom: 24px;
+    }
+
+    &__route {
+        position: absolute;
+        bottom: -5px;
+        right: 5vw;
+        background: $white900;
+        padding: 16px 24px;
+
+        &__text {
+            @include font($roboto, 16px, 700, 18px, $black900);
+
+            span {
+                color: $mainColor;
+                text-transform: capitalize;
+                font-weight: 700;
+            }
+        }
+    }
+}

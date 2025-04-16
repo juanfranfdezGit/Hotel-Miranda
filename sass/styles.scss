@@ -2,6 +2,7 @@
 @use 'mixin' as *;
 @use 'common/header';
 @use 'common/footer';
+@use 'common/title';
 @use 'home/banner';
 @use 'home/aboutus';
 @use 'home/rooms';
@@ -9,6 +10,7 @@
 @use 'home/features';
 @use 'home/foods';
 @use 'home/datas';
+@use 'about/aboutVideo';
 
 * {
     padding: 0;
