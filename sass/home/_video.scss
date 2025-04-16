@@ -28,3 +28,37 @@
         height: 100%;
     }
 }
+
+@media (min-width: 1000px) {
+    .video {
+        margin-top: 180px;
+        position: relative;
+        padding: 130px 200px;
+    
+        &__title {
+            width: 26vw;
+        }
+    
+        &__description {
+            width: 26vw;
+        }
+    
+        &__video {
+            position: absolute;
+            width: 30vw;
+            height: 460px;
+            right: 19vw;
+            object-fit: cover
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30%;
+            height: 100%;
+            background: $mainColorDark;
+        }
+    }
+}

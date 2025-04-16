@@ -6,8 +6,8 @@ export default function swiper() {
     loop: true,
     spaceBetween: 0,
     coverflowEffect: {
-      rotate: 30,
-      stretch: 0,
+      rotate: 1,
+      stretch: 200,
       depth: 100,
       modifier: 1,
       slideShadows: true,
@@ -23,17 +23,30 @@ export default function swiper() {
 
   const menuSwiper = new Swiper('.swiper.menu', {
     loop: true,
+    slidesPerView: 1,  
     navigation: {
       nextEl: '.swiper-button-next.menu',
       prevEl: '.swiper-button-prev.menu',
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 2,
+      },
     },
   });
 
   const foodSwiper = new Swiper('.swiper.food', {
     loop: true,
+    slidesPerView: 1,  
     pagination: {
       el: '.swiper-pagination.food',
       clickable: true,
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
     },
   });
 }

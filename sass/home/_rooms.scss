@@ -100,3 +100,37 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .rooms {
+        &__icons {
+            top: 130px;
+        }
+    
+        &__info {
+            top: 580px;
+        }
+    }
+    
+    .swiper {
+        height: 500px;
+    
+        &-slide {
+            &.swiper-slide-active {
+                transform: scale(1);
+            }
+    
+            img {
+                width: 75%;
+            }
+        }
+    
+        &-button-prev {
+            margin-left: 20px;
+        }
+    
+        &-button-next {
+            margin-right: 30px;
+        }
+    }
+}

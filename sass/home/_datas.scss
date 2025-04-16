@@ -25,3 +25,15 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .datas {
+        @include set-flex(center, center, row);
+        margin: 0 5vw;
+        gap: 100px;
+
+        &__item {
+            @include set-flex(center, flex-start, column);
+        }
+    }
+}

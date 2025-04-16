@@ -68,3 +68,27 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .features {
+        &__title {
+            font-size: 80px;
+            margin-top: 40px
+        }
+    
+        &__items {
+            padding: 20px 5vw;
+            flex-wrap: wrap;
+            gap: 20px;
+    
+            &__item {
+                flex: 0 0 30%;
+                gap: 30px;
+            }
+        }
+    
+        &__indicators {
+            display: none;
+        }
+    }
+}

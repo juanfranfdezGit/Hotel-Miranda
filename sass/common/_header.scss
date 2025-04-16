@@ -11,6 +11,7 @@
     left: 0;
     z-index: 40;
     background: $white900;
+    transition: all .5s;
 
     &__span {
         display: none;
