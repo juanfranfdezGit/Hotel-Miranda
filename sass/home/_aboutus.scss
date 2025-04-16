@@ -69,3 +69,54 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .aboutus {
+        padding: 60px 0;
+        position: relative;
+        @include set-flex(flex-start, center, row);
+        padding: 60px 45vw 0px 10vw;
+        margin-bottom: 150px;
+
+        &__info {
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            width: 50vw;
+            padding-left: 10vw;
+    
+            &__span {
+                margin-top: -86px;
+            }
+
+            &__title {
+                width: 50%;
+            }
+
+            &__description {
+                width: 45%;
+            }
+        }
+    
+        &__card {
+            @include set-flex(center, flex-start, column-reverse);
+            gap: 30px;
+            width: 20vw;
+            box-shadow: none;
+            z-index: 12;
+    
+            &__image {
+                box-shadow: 0 0 4px $black400;
+            }
+    
+            &__info {
+                box-shadow: 0 0 4px $black400;
+            }
+    
+            &-dark {
+                margin-top: 40px;
+                @include set-flex(center, flex-start, column);
+            }
+        }
+    }
+}

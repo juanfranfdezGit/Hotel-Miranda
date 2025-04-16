@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 40;
   background: #fff;
 }
 .header__span {
@@ -149,6 +149,7 @@ footer .socials__logo {
 }
 footer .socials__description {
   margin-bottom: 20px;
+  width: 80%;
 }
 footer .socials__list {
   display: flex;
@@ -445,6 +446,57 @@ footer .copyright p {
   color: #fff;
 }
 
+@media (min-width: 1000px) {
+  .aboutus {
+    padding: 60px 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 60px 45vw 0px 10vw;
+    margin-bottom: 150px;
+  }
+  .aboutus__info {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 50vw;
+    padding-left: 10vw;
+  }
+  .aboutus__info__span {
+    margin-top: -86px;
+  }
+  .aboutus__info__title {
+    width: 50%;
+  }
+  .aboutus__info__description {
+    width: 45%;
+  }
+  .aboutus__card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 30px;
+    width: 20vw;
+    box-shadow: none;
+    z-index: 12;
+  }
+  .aboutus__card__image {
+    box-shadow: 0 0 4px #d3d3d3;
+  }
+  .aboutus__card__info {
+    box-shadow: 0 0 4px #d3d3d3;
+  }
+  .aboutus__card-dark {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
 .rooms {
   width: 100vw;
   text-align: center;
