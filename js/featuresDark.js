@@ -2,27 +2,28 @@ export default function featuresDark() {
     const container = document.getElementsByClassName("features__items-dark")[0]; 
     const items = container.children;  
     const indicators = document.querySelectorAll(".features__indicators__item-dark"); 
+    const gap = 20;
     let startX = 0;
     let currentTranslate = 0;  
     let isDragging = false;
 
     if (container && container.children.length > 0) {
-        const items = container.children;
         console.log(items);
-      } else {
+    } else {
         console.log("El contenedor no tiene hijos.");
-      }
+    }
 
     const getTotalWidth = () => {
         let totalWidth = 0;
         Array.from(items).forEach(item => {
             totalWidth += item.offsetWidth;  
         });
+        totalWidth += gap * (items.length - 1);
         return totalWidth;
     };
 
     const containerWidth = container.offsetWidth; 
-    const itemWidth = items[0].offsetWidth;
+    const itemWidth = items[0].offsetWidth + gap; 
     const totalWidth = getTotalWidth(); 
 
     const maxTranslate = -(totalWidth - containerWidth);  
