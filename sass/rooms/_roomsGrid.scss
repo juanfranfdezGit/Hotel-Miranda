@@ -1,0 +1,62 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.roomsGrid {
+    padding: 48px 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+
+    &__item {
+        position: relative;
+        text-align: center;
+
+        &__image {
+            width: 100%;
+        }
+
+        &__title {
+            @include font($old, 24px, 400, 24px, $black900);
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            width: 80%;
+            margin: 0 auto 20px;
+        }
+
+        &__actions {
+            &__price {
+                @include font($roboto, 16px, 700, 24px, $mainColor);
+
+                a {
+                    margin-left: 20px;
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+.rooms__icons.roomsGrid__item {
+    top: -20px;
+    width: 70%;
+}
+
+.pagination {
+    @include set-flex(flex-start, center, row);
+    margin: 0 auto -40px;
+    gap: 12px;
+
+    &__numb {
+        @include set-flex(center, center, row);
+        width: 39px;
+        height: 39px;
+        @include font($roboto, 14px, 700, 19px, $black900);
+
+        &.active {
+            color: $white900;
+            background: $mainColor;
+        }
+    }
+}

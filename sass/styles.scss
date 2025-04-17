@@ -13,6 +13,10 @@
 @use 'about/aboutVideo';
 @use 'about/restaurant';
 @use 'about/facts';
+@use 'rooms/roomsGrid';
+@use 'roomDetails/details';
+@use 'roomDetails/availabilityDetails';
+@use 'roomDetails/ameneties';
 
 * {
     padding: 0;

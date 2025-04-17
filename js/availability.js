@@ -1,6 +1,6 @@
 export default function availability() {
     const arrival = document.getElementById("arrival");
-    const ledeparture = document.getElementById("ledeparture");
+    const departure = document.getElementById("departure");
 
     const today = new Date();
     const departureDate = new Date(today);
@@ -14,6 +14,6 @@ export default function availability() {
     }
 
     arrival.value = formatedDate(today);
-    ledeparture.value = formatedDate(departureDate);
+    departure.value = formatedDate(departureDate);
 
 }
