@@ -17,6 +17,9 @@
 @use 'roomDetails/details';
 @use 'roomDetails/availabilityDetails';
 @use 'roomDetails/ameneties';
+@use 'roomDetails/client';
+@use 'roomDetails/cancellation';
+@use 'roomDetails/relatedRooms';
 
 * {
     padding: 0;
