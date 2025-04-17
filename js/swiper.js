@@ -49,4 +49,19 @@ export default function swiper() {
       },
     },
   });
+
+  const factsSwiper = new Swiper('.swiper.facts', {
+    loop: true,
+    slidesPerView: 1,  
+    pagination: {
+      el: '.swiper-pagination.facts',
+      clickable: true,
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
+  });
 }

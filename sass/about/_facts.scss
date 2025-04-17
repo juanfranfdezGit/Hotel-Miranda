@@ -1,0 +1,67 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.facts {
+    padding: 40px 20px 0;
+
+    &__span {
+        @include font($roboto, 13px, 700, 18px, $black900);
+        letter-spacing: 2.8px;
+    }
+
+    &__title {
+        margin-top: 20px;
+    }
+
+    &__items {
+        @include set-flex(center, flex-start, column);
+        margin-top: 16px;
+        gap: 16px;
+
+        &__item {
+            @include set-flex(flex-start, center, row);
+            padding: 25px 20px;
+            gap: 14px;
+            width: 100%;
+
+            &__info {
+                &__title {
+                    @include font($old, 60px, 400, 60px, $black900);
+                    letter-spacing: -1.8px;
+                }
+
+                &__description {
+                    @include font($roboto, 16px, 400, 16px, $black900);
+                }
+            }
+
+            &__arrow {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .facts {
+        width: 100%;
+        height: 240px;
+        margin-bottom: -20px;
+    }
+
+    .swiper-pagination.facts {
+        position: absolute;
+        bottom: -180px;
+        left: 0;
+        right: 0;
+        @include set-flex(center, flex-start, row);
+        z-index: 10;
+    
+        .swiper-pagination-bullet {
+            background-color: $white200; 
+            opacity: 1;
+        }
+    
+        .swiper-pagination-bullet-active {
+            background-color: $mainColor; 
+        }
+    }
+}
