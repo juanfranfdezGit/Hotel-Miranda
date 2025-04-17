@@ -1550,6 +1550,84 @@ footer .copyright p {
   opacity: 0.5;
 }
 
+.offersGrid {
+  padding: 40px 20px;
+}
+.offersGrid__item {
+  box-shadow: 0px 0px 8px #333333;
+  padding: 0 0 40px 0;
+  margin-bottom: 40px;
+}
+.offersGrid__item__image {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+.offersGrid__item__image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offersGrid__item__image__price {
+  position: absolute;
+  bottom: 0;
+  right: 14px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #DE5777;
+}
+.offersGrid__item__image__price-old {
+  bottom: 40px;
+  font-size: 26px;
+  text-decoration: line-through;
+  color: #BEAD8E;
+}
+.offersGrid__item__image__price span {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #DE5777;
+}
+.offersGrid__item__image__price span.old {
+  color: #BEAD8E;
+}
+.offersGrid__item__info {
+  padding: 20px 40px 20px 20px;
+}
+.offersGrid__item__info__span {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #333333;
+  letter-spacing: 2.8px;
+  opacity: 0.7;
+}
+.offersGrid__item__info__title {
+  font-family: "Old Standard TT", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 48px;
+  color: #111;
+  letter-spacing: -1.44px;
+  margin: 10px 0 20px;
+}
+.offersGrid__item__info__description {
+  opacity: 0.7;
+  margin-bottom: -30px;
+}
+
+.ameneties__grid.offersGrid {
+  margin-bottom: -30px;
+}
+
+.button.offersGrid {
+  margin-left: 20px;
+}
+
 * {
   padding: 0;
   margin: 0;
