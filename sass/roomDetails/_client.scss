@@ -49,3 +49,12 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .client {
+        margin: 80px 20vw;
+        width: 20vw;
+        height: 456px;
+        box-shadow: 0 0 8px $black900;
+    }
+}

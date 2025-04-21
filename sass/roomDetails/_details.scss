@@ -4,29 +4,62 @@
 .details {
     padding: 40px 20px;
 
-    &__span {
-        @include font($roboto, 13px, 700, 18px, $black900);
-        letter-spacing: 2.8px;
-    }
+    &__info {
+        @include set-flex(center, flex-start, column);
 
-    &__title {
-        @include font($old, 40px, 400, 48px, $black900);
-        letter-spacing: -1.4px;
-    }
-
-    &__price {
-        @include font($roboto, 32px, 700, 43px, $mainColor);
-        margin: 16px 0;
-
-        span {
-            @include font($roboto, 13px, 700, 43px, $mainColor);
-            text-transform: capitalize;
+        &__span {
+            @include font($roboto, 13px, 700, 18px, $black900);
+            letter-spacing: 2.8px;
+        }
+    
+        &__title {
+            @include font($old, 40px, 400, 48px, $black900);
+            letter-spacing: -1.4px;
+        }
+    
+        &__price {
+            @include font($roboto, 32px, 700, 43px, $mainColor);
+            margin: 16px 0;
+    
+            span {
+                @include font($roboto, 13px, 700, 43px, $mainColor);
+                text-transform: capitalize;
+            }
         }
     }
+
 
     &__image {
         width: 100%;
         height: 214px;
         object-fit: cover;
+    }
+}
+
+@media (min-width: 1000px) {
+    .details {
+        width: 60%;
+        padding: 120px 0 370px 20vw;
+    
+        &__info {
+            position: relative;
+            width: 95%;
+            z-index: 20;
+            background: $white900;
+            padding: 1rem 3rem;
+        
+            &__price {
+                position: absolute;
+                right: 3rem;
+                top: 1rem;
+            }
+        }
+    
+    
+        &__image {
+            height: 490px;
+            position: relative;
+            top: -40px;
+        }
     }
 }

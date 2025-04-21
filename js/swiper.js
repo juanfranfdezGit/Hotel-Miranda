@@ -1,6 +1,5 @@
 export default function swiper() {
   const mainSwiper = new Swiper('.swiper.main', {
-    effect: 'coverflow',
     centeredSlides: true,
     slidesPerView: 1,
     loop: true,
@@ -18,6 +17,31 @@ export default function swiper() {
     },
     pagination: {
       el: '.swiper-pagination.main',
+    },
+  });
+
+  const relatedSwiper = new Swiper('.swiper.related', {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 0,
+    coverflowEffect: {
+      rotate: 1,
+      stretch: 200,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next.main',
+      prevEl: '.swiper-button-prev.main',
+    },
+    pagination: {
+      el: '.swiper-pagination.main',
+    },
+    breakpoints: {
+      1000: {
+        slidesPerView: 4,
+      },
     },
   });
 

@@ -15,16 +15,24 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 
-        &__column {
-            &__item {
-                @include set-flex(flex-start, center, row);
-                gap: 8px;
-                margin-bottom: 16px;
+        &__item {
+            @include set-flex(flex-start, center, row);
+            gap: 8px;
+            margin-bottom: 16px;
 
-                &__description {
-                    @include font($roboto, 15px, 400, 1rem, $black900);
-                }
+            &__description {
+                @include font($roboto, 15px, 400, 1rem, $black900);
             }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .ameneties {
+        padding: 0 20vw;
+    
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

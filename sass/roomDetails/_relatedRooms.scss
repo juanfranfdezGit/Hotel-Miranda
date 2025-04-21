@@ -14,36 +14,70 @@
 
     .swiper {
         width: 100%;
+        height: 700px;
+        margin-bottom: -120px;
+    }
+
+    .swiper-slide {
+        img {
+            height: 50%;
+        }
+
+        .relatedRooms__info {
+            text-align: center;
+            background: $white900;
+            @include set-flex(flex-start, center, column);
+            margin-top: 60px;
+
+
+            &__title {
+                @include font($old, 24px, 400, 24px, $black900);
+                margin-bottom: 16px;
+            }
+    
+            &__description {
+                width: 80%;
+                margin: 0 auto 20px;
+            }
+    
+            &__actions {
+                &__price {
+                    @include font($roboto, 16px, 700, 24px, $mainColor);
+    
+                    a {
+                        margin-left: 20px;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
     }
 
     .rooms__icons {
-        top: 420px;
+        top: 328px;
         box-shadow: 0px 8px 16px 0px #8A8A8A0D;
+        padding: 1rem 4rem;
     }
+}
 
-    &__info {
-        text-align: center;
-        margin-top: -70px;
-
-        &__title {
-            @include font($old, 24px, 400, 24px, $black900);
-            margin-bottom: 16px;
+@media (min-width: 1000px) {
+    .relatedRooms {
+        margin: 100px 20vw 40px;
+    
+        .swiper {
+            width: 100%;
+            height: 430px;
+            margin-bottom: 0px;
+        }
+    
+        .swiper-slide {
+            margin-right: 20px;
         }
 
-        &__description {
-            width: 80%;
-            margin: 0 auto 20px;
-        }
-
-        &__actions {
-            &__price {
-                @include font($roboto, 16px, 700, 24px, $mainColor);
-
-                a {
-                    margin-left: 20px;
-                    opacity: .5;
-                }
-            }
+        .rooms__icons {
+            top: 190px;
+            box-shadow: 0px 8px 16px 0px #8A8A8A0D;
+            padding: 1rem 4rem;
         }
     }
 }

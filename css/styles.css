@@ -1394,7 +1394,13 @@ footer .copyright p {
 .details {
   padding: 40px 20px;
 }
-.details__span {
+.details__info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.details__info__span {
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -1402,7 +1408,7 @@ footer .copyright p {
   color: #111;
   letter-spacing: 2.8px;
 }
-.details__title {
+.details__info__title {
   font-family: "Old Standard TT", serif;
   font-size: 40px;
   font-weight: 400;
@@ -1410,7 +1416,7 @@ footer .copyright p {
   color: #111;
   letter-spacing: -1.4px;
 }
-.details__price {
+.details__info__price {
   font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -1418,7 +1424,7 @@ footer .copyright p {
   color: #BEAD8E;
   margin: 16px 0;
 }
-.details__price span {
+.details__info__price span {
   font-family: "Roboto", sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -1432,6 +1438,29 @@ footer .copyright p {
   object-fit: cover;
 }
 
+@media (min-width: 1000px) {
+  .details {
+    width: 60%;
+    padding: 120px 0 370px 20vw;
+  }
+  .details__info {
+    position: relative;
+    width: 95%;
+    z-index: 20;
+    background: #fff;
+    padding: 1rem 3rem;
+  }
+  .details__info__price {
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+  }
+  .details__image {
+    height: 490px;
+    position: relative;
+    top: -40px;
+  }
+}
 .detailAvailability {
   padding: 20px 40px;
 }
@@ -1488,6 +1517,34 @@ footer .copyright p {
   margin: 60px -10px;
 }
 
+@media (min-width: 1000px) {
+  .detailAvailability {
+    position: absolute;
+    right: 20vw;
+    top: 500px;
+    width: 370px;
+    height: 380px;
+  }
+  .detailAvailability__form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .detailAvailability__form__item__input {
+    width: 100%;
+  }
+  .detailAvailability__form__item .button {
+    width: 92%;
+  }
+  .detailAvailability__description {
+    position: absolute;
+    left: -39.5vw;
+    bottom: -480px;
+    width: 40vw;
+  }
+}
 .ameneties {
   padding: 0 20px;
 }
@@ -1505,7 +1562,7 @@ footer .copyright p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.ameneties__grid__column__item {
+.ameneties__grid__item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1513,7 +1570,7 @@ footer .copyright p {
   gap: 8px;
   margin-bottom: 16px;
 }
-.ameneties__grid__column__item__description {
+.ameneties__grid__item__description {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -1521,6 +1578,14 @@ footer .copyright p {
   color: #111;
 }
 
+@media (min-width: 1000px) {
+  .ameneties {
+    padding: 0 20vw;
+  }
+  .ameneties__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .client {
   margin: 80px 0;
   padding: 17px 26px 40px;
@@ -1577,6 +1642,14 @@ footer .copyright p {
   width: 85%;
 }
 
+@media (min-width: 1000px) {
+  .client {
+    margin: 80px 20vw;
+    width: 20vw;
+    height: 456px;
+    box-shadow: 0 0 8px #111;
+  }
+}
 .cancellation {
   margin-top: -50px;
   padding: 0 20px;
@@ -1595,6 +1668,25 @@ footer .copyright p {
   opacity: 0.7;
 }
 
+@media (min-width: 1000px) {
+  .cancellation {
+    margin-top: 120px;
+    padding: 0 20vw;
+  }
+  .cancellation__title {
+    font-family: "Old Standard TT", serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #111;
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 10px;
+    margin-bottom: 36px;
+  }
+  .cancellation__description {
+    opacity: 0.7;
+  }
+}
 .relatedRooms {
   margin: 100px 20px 40px;
   position: relative;
@@ -1611,16 +1703,22 @@ footer .copyright p {
 }
 .relatedRooms .swiper {
   width: 100%;
+  height: 700px;
+  margin-bottom: -120px;
 }
-.relatedRooms .rooms__icons {
-  top: 420px;
-  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.0509803922);
+.relatedRooms .swiper-slide img {
+  height: 50%;
 }
-.relatedRooms__info {
+.relatedRooms .swiper-slide .relatedRooms__info {
   text-align: center;
-  margin-top: -70px;
+  background: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
 }
-.relatedRooms__info__title {
+.relatedRooms .swiper-slide .relatedRooms__info__title {
   font-family: "Old Standard TT", serif;
   font-size: 24px;
   font-weight: 400;
@@ -1628,22 +1726,45 @@ footer .copyright p {
   color: #111;
   margin-bottom: 16px;
 }
-.relatedRooms__info__description {
+.relatedRooms .swiper-slide .relatedRooms__info__description {
   width: 80%;
   margin: 0 auto 20px;
 }
-.relatedRooms__info__actions__price {
+.relatedRooms .swiper-slide .relatedRooms__info__actions__price {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   color: #BEAD8E;
 }
-.relatedRooms__info__actions__price a {
+.relatedRooms .swiper-slide .relatedRooms__info__actions__price a {
   margin-left: 20px;
   opacity: 0.5;
 }
+.relatedRooms .rooms__icons {
+  top: 328px;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.0509803922);
+  padding: 1rem 4rem;
+}
 
+@media (min-width: 1000px) {
+  .relatedRooms {
+    margin: 100px 20vw 40px;
+  }
+  .relatedRooms .swiper {
+    width: 100%;
+    height: 430px;
+    margin-bottom: 0px;
+  }
+  .relatedRooms .swiper-slide {
+    margin-right: 20px;
+  }
+  .relatedRooms .rooms__icons {
+    top: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.0509803922);
+    padding: 1rem 4rem;
+  }
+}
 .offersGrid {
   padding: 40px 20px;
 }

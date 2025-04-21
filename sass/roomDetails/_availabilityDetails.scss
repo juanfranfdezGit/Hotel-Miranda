@@ -50,3 +50,35 @@
         margin: 60px -10px;
     }
 }
+
+@media (min-width: 1000px) {
+    .detailAvailability {
+        position: absolute;
+        right: 20vw;
+        top: 500px;
+        width: 370px;
+        height: 380px;
+    
+        &__form {
+            @include set-flex(center, flex-start, column);
+            gap: 20px;
+    
+            &__item {
+                &__input {
+                    width: 100%;
+                }
+    
+                .button {
+                    width: 92%;
+                }
+            }
+        }
+    
+        &__description {
+            position: absolute;
+            left: -39.5vw;
+            bottom: -480px;
+            width: 40vw;
+        }
+    }
+}
