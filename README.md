@@ -1,2 +1,2 @@
 # Hotel-Miranda
-academy project
+academy project hotel marketing website
