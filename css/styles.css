@@ -1781,15 +1781,18 @@ footer .copyright p {
 .formSection__form__item__label {
   position: absolute;
   left: 60px;
+  top: 12px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 2rem;
   color: #333333;
   pointer-events: none;
+  opacity: 0.7;
 }
 .formSection__form__item__ico {
   position: absolute;
+  top: 20px;
   left: 20px;
   pointer-events: none;
 }
@@ -1798,6 +1801,17 @@ footer .copyright p {
   background: #F8F8F8;
   border: none;
   width: 100%;
+}
+.formSection__form__item__textarea {
+  padding: 20px 20px 20px 60px;
+  background: #F8F8F8;
+  border: none;
+  width: 100%;
+  height: 175px;
+}
+.formSection__form__item__submit {
+  width: 75%;
+  margin: 10px auto -60px;
 }
 
 * {
