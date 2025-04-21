@@ -42,6 +42,7 @@
                 border: none;
                 width: 100%;
                 height: 175px;
+                resize: none;
             }
 
             &__submit {
@@ -57,4 +58,31 @@
             }
         }
     }
+}
+
+@media (min-width: 1000px) {
+    .formSection {
+        padding: 80px 25vw 60px;
+    
+        &__form {
+            @include set-flex(center, flex-start, row);
+            flex-wrap: wrap;
+    
+            &__item {
+                width: 47%;
+                @include set-flex(flex-start, center, row);
+                position: relative;
+    
+                &__submit {
+                    width: 35%;
+                    margin: 20px auto -60px;
+                }
+
+                &.area {
+                    width: 97%;
+                }
+            }
+        }
+    }
+    
 }

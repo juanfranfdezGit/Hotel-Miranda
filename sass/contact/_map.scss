@@ -10,3 +10,13 @@
         object-fit: cover;
     }
 }
+
+@media (min-width: 1000px) {
+    .map {
+        padding: 20px 20vw;
+    
+        &__image {
+            height: 700px;
+        }
+    }
+}

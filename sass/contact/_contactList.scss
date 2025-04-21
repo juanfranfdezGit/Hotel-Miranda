@@ -43,3 +43,14 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .contactList {
+        padding: 120px 20vw;
+        @include set-flex(center, flex-start, row);
+    
+        &__section {
+            width: 30%;
+        }
+    }
+}
