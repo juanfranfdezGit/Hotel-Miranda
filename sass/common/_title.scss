@@ -31,3 +31,23 @@
         }
     }
 }
+
+@media (min-width: 1000px) {
+    .title {
+        padding: 180px 20vw 96px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            height: 80%;
+            background: $white400;
+        }
+
+        &__route {
+            right: 20vw;
+        }
+    }
+}

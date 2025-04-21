@@ -12,17 +12,34 @@
         object-fit: cover;
     }
 
-    &__span {
-        @include font($roboto, 13px, 700, 18px, $black900);
-        opacity: .7;
-        letter-spacing: 2.8px;
-    }
+    &__info {
+        @include set-flex(center, flex-start, column);
+        gap: 20px;
 
-    &__title {
-        @include font($old, 40px, 400, 48px, $black900);
+        &__span {
+            @include font($roboto, 13px, 700, 18px, $black900);
+            opacity: .7;
+            letter-spacing: 2.8px;
+        }
+    
+        &__title {
+            @include font($old, 40px, 400, 48px, $black900);
+        }
+    
+        &__description {
+            margin-bottom: -10px;
+        }
     }
+}
 
-    &__description {
-        margin-bottom: -10px;
+@media (min-width: 1000px) {
+    .restaurant {
+        padding: 0 20vw;
+        @include set-flex(flex-start, center, row);
+    
+        &__image {
+            height: 360px;
+            width: 50%;
+        }
     }
 }
