@@ -21,6 +21,10 @@
 @use 'roomDetails/cancellation';
 @use 'roomDetails/relatedRooms';
 @use 'offers/offersGrid';
+@use 'offers/popularList';
+@use 'contact/contactList';
+@use 'contact/map';
+@use 'contact/form';
 
 * {
     padding: 0;

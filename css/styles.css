@@ -955,11 +955,10 @@ footer .copyright p {
 
 .swiper.food {
   height: 500px;
-  width: 107%;
-  margin: -250px auto 100px;
+  width: 100%;
+  margin: -100px auto 100px;
   position: relative;
   overflow: hidden;
-  right: 4vw;
 }
 
 .swiper-slide.food-slide {
@@ -1626,6 +1625,179 @@ footer .copyright p {
 
 .button.offersGrid {
   margin-left: 20px;
+}
+
+.popularRooms {
+  padding: 100px 20px 60px;
+  position: relative;
+  background: #111;
+  text-align: center;
+}
+.popularRooms__span {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #BEAD8E;
+  letter-spacing: 2.8px;
+}
+.popularRooms__title {
+  font-family: "Old Standard TT", serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+  margin: 28px 0 48px;
+}
+.popularRooms .swiper {
+  width: 100%;
+  height: 240px;
+}
+.popularRooms__icons {
+  position: absolute;
+  z-index: 20;
+  background: #fff;
+  top: 455px;
+  box-shadow: 0px 8px 16px 0px rgba(138, 138, 138, 0.0509803922);
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 16px;
+  padding: 16px 24px;
+}
+.popularRooms__info {
+  text-align: center;
+  margin-top: -130px;
+  padding: 60px 0 40px;
+  background: #fff;
+}
+.popularRooms__info__title {
+  font-family: "Old Standard TT", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #111;
+  margin-bottom: 16px;
+}
+.popularRooms__info__description {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+.popularRooms__info__actions__price {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #BEAD8E;
+}
+.popularRooms__info__actions__price a {
+  margin-left: 20px;
+  opacity: 0.5;
+}
+
+.contactList {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px 20px;
+}
+.contactList__title {
+  font-size: 24px;
+}
+.contactList__section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 22px;
+  padding: 52px 0 99px 20px;
+  position: relative;
+  width: 100%;
+}
+.contactList__section::before {
+  content: "01";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #111;
+  opacity: 0.1;
+}
+.contactList__section:nth-child(2)::before {
+  content: "02";
+}
+.contactList__section:nth-child(3)::before {
+  content: "03";
+}
+.contactList__section__info__title {
+  font-family: "Old Standard TT", serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #333333;
+  text-transform: capitalize;
+}
+.contactList__section__info__description {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #333333;
+  opacity: 0.6;
+  text-transform: capitalize;
+}
+
+.map {
+  padding: 20px;
+}
+.map__image {
+  width: 100%;
+  height: 200px;
+}
+
+.formSection {
+  padding: 20px 20px 60px;
+}
+.formSection__form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.formSection__form__item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.formSection__form__item__label {
+  position: absolute;
+  left: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #333333;
+  pointer-events: none;
+}
+.formSection__form__item__ico {
+  position: absolute;
+  left: 20px;
+  pointer-events: none;
+}
+.formSection__form__item__input {
+  padding: 20px 20px 20px 60px;
+  background: #F8F8F8;
+  border: none;
+  width: 100%;
 }
 
 * {

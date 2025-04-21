@@ -1,0 +1,45 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.contactList {
+    @include set-flex(center, flex-start, column);
+    gap: 40px;
+    padding: 24px 20px;
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__section {
+        @include set-flex(flex-start, center, row);
+        gap: 22px;
+        padding: 52px 0 99px 20px;
+        position: relative;
+        width: 100%;
+
+        &::before {
+            content: '01';
+            position: absolute;
+            top: 0;
+            right: 0;
+            @include font($roboto, 200px, 700, 100%, $black900);
+            opacity: .1;
+        }
+
+        &:nth-child(2)::before {content: '02'}
+        &:nth-child(3)::before {content: '03'}
+
+        &__info {
+            &__title {
+                @include font($old, 20px, 400, 24px, $black700);
+                text-transform: capitalize;
+            }
+
+            &__description {
+                @include font($roboto, 14px, 400, 20px, $black700);
+                opacity: .6;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.formSection {
+    padding: 20px 20px 60px;
+
+    &__form {
+        @include set-flex(center, flex-start, column);
+        gap: 20px;
+
+        &__item {
+            width: 100%;
+            @include set-flex(flex-start, center, row);
+            position: relative;
+
+            &__label {
+                position: absolute;
+                left: 60px;
+                @include font($roboto, 16px, 400, 2rem, $black700);
+                pointer-events: none;
+            }
+
+            &__ico {
+                position: absolute;
+                left: 20px;
+                pointer-events: none;
+            }
+
+            &__input {
+                padding: 20px 20px 20px 60px;
+                background: $black100;
+                border: none;
+                width: 100%;
+            }
+        }
+    }
+}
