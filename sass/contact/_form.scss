@@ -48,6 +48,13 @@
                 width: 75%;
                 margin: 10px auto -60px;
             }
+
+            &__input:focus + &__label,
+            &__input:not(:placeholder-shown) + &__label,
+            &__textarea:focus + &__label,
+            &__textarea:not(:placeholder-shown) + &__label {
+                opacity: 0;
+            }
         }
     }
 }
