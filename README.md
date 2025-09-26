@@ -1,2 +1,2 @@
 # Hotel-Miranda
-hotel marketing website
+marketing website
